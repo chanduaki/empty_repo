@@ -1,0 +1,67 @@
+// Copyright © 2019 The Things Network Foundation, The Things Industries B.V.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+.container-device
+  padding-bottom: $ls.xs
+  &.has-description
+    padding-bottom: 0
+
+    .description
+      text-margin-bottom($ls.xs)
+
+.title
+  text-margin-top($ls.m)
+  text-margin-bottom($cs.m)
+  font-weight: bold
+
+.below-title
+  one-liner()
+  display: flex
+
+.description
+  text-margin-top($ls.s)
+  text-margin-bottom($ls.s)
+  display: block
+
+.bottom
+  horizontalize()
+  text-margin-top(2.5rem)
+  text-margin-bottom(1.3rem)
+
+.children, .creation-date
+  display: flex
+  align-items: center
+
+.creation-date
+  color: $tc-subtle-gray
+  +media-query($bp.s)
+    display: none
+
+.h-rule
+  margin-top: 0
+  margin-bottom: $ls.m
+  +media-query($bp.s)
+    margin-bottom: $ls.s
+
+.messages
+  one-liner()
+  margin-left: $cs.m
+  display: flex
+
+.message-count
+  &:first-child
+    margin-right: $cs.xxs
+
+.icon
+  color: $c-active-blue

@@ -1,0 +1,60 @@
+# Root
+/ @johanstokking @htdvisser
+/CODEOWNERS @johanstokking
+/LICENSE @johanstokking
+
+# Clear common folders
+/doc
+/pkg
+
+# Dependencies
+/go.mod @johanstokking @htdvisser @rvolosatovs
+/go.sum @johanstokking @htdvisser @rvolosatovs
+
+# Build pipeline
+/Makefile @htdvisser @rvolosatovs @johanstokking
+/magefile.go @htdvisser @rvolosatovs @johanstokking
+/.make @htdvisser @rvolosatovs @johanstokking
+/.mage @htdvisser @rvolosatovs @johanstokking
+
+# API, configuration, CLI and storage compatibility
+/api @johanstokking @htdvisser @rvolosatovs
+/cmd @johanstokking @htdvisser @rvolosatovs
+/pkg/ttnpb @johanstokking @htdvisser @rvolosatovs
+/pkg/**/config.go @johanstokking @htdvisser @rvolosatovs
+/pkg/config/shared.go @johanstokking @htdvisser @rvolosatovs
+/pkg/identityserver/store @johanstokking @htdvisser @rvolosatovs
+/pkg/**/registry.go @johanstokking @htdvisser @rvolosatovs
+
+# Security
+/pkg/auth @johanstokking @htdvisser
+/pkg/crypto @johanstokking @htdvisser @rvolosatovs
+
+# Shared components
+/pkg/component @johanstokking @htdvisser
+/pkg/pfconfig @rvolosatovs @KrishnaIyer
+/pkg/types @johanstokking @htdvisser @rvolosatovs
+/pkg/webui @bafonins @kschiffer @pgalic96
+/pkg/oauth @htdvisser @bafonins @kschiffer
+
+# Subsystems
+/pkg/applicationserver @johanstokking @adriansmares @KrishnaIyer
+/pkg/console @bafonins @kschiffer @pgalic96
+/pkg/gatewayconfigurationserver @rvolosatovs @KrishnaIyer @htdvisser
+/pkg/gatewayserver @johanstokking @KrishnaIyer @adriansmares
+/pkg/identityserver @htdvisser @bafonins @kschiffer
+/pkg/interop @johanstokking @rvolosatovs @adriansmares
+/pkg/joinserver @johanstokking @rvolosatovs @adriansmares
+/pkg/networkserver @johanstokking @rvolosatovs @adriansmares
+/pkg/packetbrokeragent @johanstokking @adriansmares
+
+# SDKs
+/sdk/js @bafonins @kschiffer @pgalic96
+
+# Clear generated code
+/api/api.md
+/api/api.swagger.json.
+/doc/data/api/*/*.yml
+/pkg/ttnpb/*.pb.*.go
+/pkg/ttnpb/*.pb.go
+/sdk/js/generated

@@ -1,0 +1,95 @@
+// Copyright © 2019 The Things Network Foundation, The Things Industries B.V.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+.container
+  display: flex
+  align-items: center
+
+  img
+    height: 100%
+    width: 100%
+    object-fit: contain
+    object-position: left
+
+  .logo-container
+    display: flex
+    align-items: center
+    line-height: 0
+    width: 11rem
+    height: 2.3rem
+    +media-query($bp.s)
+      width: 9rem
+      height: 2.1rem
+
+  .logo
+    display: flex
+    align-items: center
+
+  .secondary-logo
+    display: flex
+    align-items: center
+    flex-direction: column
+
+    &-container
+      display: flex
+      align-items: center
+
+  &:not(.vertical)
+    &.custom-branding .logo
+      display: flex
+      align-items: center
+      padding-right: $ls.xs
+      +media-query($bp.s)
+        padding-right: $ls.xxs
+
+      .logo-container
+        +media-query($bp.s)
+          max-width: 7rem
+
+    .secondary-logo
+      border-dark('left')
+      align-items: center
+      padding-left: $ls.xs
+      +media-query($bp.s)
+        padding-left: $ls.xxs
+
+      &-container
+        width: 9rem
+        height: 1.9rem
+        +media-query($bp.s)
+          width: 6rem
+          height: 1.5rem
+
+  &.vertical
+    max-width: 15rem
+    flex-direction: column
+    margin-bottom: $ls.s
+
+    &.custom-branding .logo
+      border-dark('bottom')
+      padding-bottom: $ls.xs
+      margin-bottom: $ls.xs
+      height: auto
+
+      &-container
+        width: 100%
+        height: auto
+
+    .secondary-logo
+      margin-left: auto
+      margin-right: auto
+
+      &-container
+        display: block
+        height: 2.2rem
