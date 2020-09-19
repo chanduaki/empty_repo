@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # The Go Programming Language
 
 Go is an open source programming language that makes it easy to build simple,
@@ -43,4 +43,4 @@ places to ask questions about the Go language.
 
 [rf]: https://reneefrench.blogspot.com/
 [cc3-by]: https://creativecommons.org/licenses/by/3.0/
-=======
+
