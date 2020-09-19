@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataCell should match snapshot 1`] = `
+<Cell
+  centered={false}
+  className="cellData"
+  colSpan={1}
+  component="td"
+  small={false}
+>
+  Data entry
+</Cell>
+`;
+
+exports[`HeadCell should match snapshot 1`] = `
+<Cell
+  centered={false}
+  className="cellHead"
+  colSpan={1}
+  component="th"
+  small={false}
+>
+  <Message
+    capitalize={false}
+    content="Head cell"
+    firstToLower={false}
+    firstToUpper={false}
+    lowercase={false}
+    uppercase={false}
+  />
+</Cell>
+`;

@@ -1,0 +1,188 @@
+// Copyright © 2019 The Things Network Foundation, The Things Industries B.V.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+import React from 'react'
+import classnames from 'classnames'
+import bind from 'autobind-decorator'
+import MaskedInput from 'react-text-mask'
+
+import PropTypes from '../../lib/prop-types'
+
+import style from './input.styl'
+
+const PLACEHOLDER_CHAR = '·'
+
+const hex = /[0-9a-f]/i
+
+const masks = {}
+const mask = function(min, max, showPerChar = false) {
+  const key = `${min}-${max}`
+  if (masks[key]) {
+    return masks[key]
+  }
+
+  const wordSize = showPerChar ? 2 : 1
+
+  let length = 3 * Math.floor(max / wordSize) - 1
+  if (showPerChar && max % wordSize !== 0) {
+    // account for the space and the extra character
+    length += wordSize
+  }
+
+  const r = new Array(length).fill(hex)
+  for (let i = 0; i < r.length; i++) {
+    if ((i + 1) % 3 === 0) {
+      r[i] = ' '
+    }
+  }
+
+  return r
+}
+
+const upper = function(str) {
+  return str.toUpperCase()
+}
+
+const clean = function(str) {
+  return str.replace(new RegExp(`[ ${PLACEHOLDER_CHAR}]`, 'g'), '')
+}
+
+export default class ByteInput extends React.Component {
+  static propTypes = {
+    className: PropTypes.string,
+    max: PropTypes.number,
+    min: PropTypes.number,
+    onBlur: PropTypes.func,
+    onChange: PropTypes.func.isRequired,
+    placeholder: PropTypes.message,
+    showPerChar: PropTypes.bool,
+    value: PropTypes.string.isRequired,
+  }
+
+  static defaultProps = {
+    className: undefined,
+    min: 0,
+    max: 256,
+    placeholder: undefined,
+    showPerChar: false,
+    onBlur: () => null,
+  }
+
+  input = React.createRef()
+
+  static validate(value, props) {
+    const { min = 0, max = 256 } = props
+    const len = Math.floor(value.length / 2)
+    return min <= len && len <= max
+  }
+
+  render() {
+    const {
+      onBlur,
+      value,
+      className,
+      min,
+      max,
+      onChange,
+      placeholder,
+      showPerChar,
+      ...rest
+    } = this.props
+
+    return (
+      <MaskedInput
+        ref={this.input}
+        key="input"
+        className={classnames(className, style.byte)}
+        value={value}
+        mask={mask(min, max, showPerChar)}
+        placeholderChar={PLACEHOLDER_CHAR}
+        keepCharPositions={false}
+        pipe={upper}
+        onChange={this.onChange}
+        placeholder={placeholder}
+        onCopy={this.onCopy}
+        onCut={this.onCut}
+        onBlur={this.onBlur}
+        showMask={!placeholder}
+        {...rest}
+      />
+    )
+  }
+
+  focus() {
+    if (this.input.current && this.input.current.inputElement) {
+      const { inputElement } = this.input.current
+
+      let i = inputElement.value.indexOf(PLACEHOLDER_CHAR)
+      if (i === -1) {
+        i = inputElement.value.length
+      }
+
+      setTimeout(function() {
+        inputElement.focus()
+        inputElement.setSelectionRange(i, i)
+      }, 0)
+    }
+  }
+
+  @bind
+  onChange(evt) {
+    this.props.onChange({
+      target: {
+        value: clean(evt.target.value),
+      },
+    })
+  }
+
+  @bind
+  onBlur(evt) {
+    this.props.onBlur({
+      target: {
+        value: clean(evt.target.value),
+      },
+    })
+  }
+
+  @bind
+  onCopy(evt) {
+    const input = evt.target
+    const value = input.value.substr(
+      input.selectionStart,
+      input.selectionEnd - input.selectionStart,
+    )
+    evt.clipboardData.setData('text/plain', clean(value))
+    evt.preventDefault()
+  }
+
+  @bind
+  onCut(evt) {
+    const input = evt.target
+    const value = input.value.substr(
+      input.selectionStart,
+      input.selectionEnd - input.selectionStart,
+    )
+    evt.clipboardData.setData('text/plain', clean(value))
+    evt.preventDefault()
+
+    // emit the cut value
+    const cut = input.value.substr(0, input.selectionStart) + input.value.substr(input.selectionEnd)
+    evt.target.value = cut
+    this.onChange({
+      target: {
+        value: cut,
+      },
+    })
+  }
+}
