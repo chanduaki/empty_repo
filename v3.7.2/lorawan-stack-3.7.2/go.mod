@@ -39,7 +39,7 @@ require (
 	github.com/TheThingsIndustries/magepkg v0.0.0-20190214092847-6c0299b7c3ed
 	github.com/TheThingsIndustries/mystique v0.0.0-20200127144137-4aa959111fe7
 	github.com/TheThingsNetwork/go-cayenne-lib v1.0.0
-	github.com/aws/aws-sdk-go v1.34.22
+	github.com/aws/aws-sdk-go v1.35.0
 	github.com/blang/semver v0.0.0-00010101000000-000000000000
 	github.com/chrj/smtpd v0.1.2
 	github.com/client9/misspell v0.3.4
@@ -52,7 +52,7 @@ require (
 	github.com/gobuffalo/envy v1.9.0 // indirect
 	github.com/gobwas/glob v0.2.3
 	github.com/gogo/protobuf v1.3.1
-	github.com/gohugoio/hugo v0.75.1
+	github.com/gohugoio/hugo v0.79.1
 	github.com/golang/gddo v0.0.0-20200310004957-95ce5a452273
 	github.com/golang/protobuf v1.3.5
 	github.com/goreleaser/goreleaser v0.132.0
@@ -100,7 +100,7 @@ require (
 	github.com/skip2/go-qrcode v0.0.0-20191027152451-9434209cb086
 	github.com/smartystreets/assertions v1.0.1
 	github.com/spf13/cast v1.3.1
-	github.com/spf13/cobra v0.0.7
+	github.com/spf13/cobra v1.1.1
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.7.1
 	github.com/ssor/bom v0.0.0-20170718123548-6386211fdfcf // indirect
@@ -122,5 +122,5 @@ require (
 	gopkg.in/mail.v2 v2.3.1
 	gopkg.in/sourcemap.v1 v1.0.5 // indirect
 	gopkg.in/square/go-jose.v2 v2.4.1
-	gopkg.in/yaml.v2 v2.3.0
+	gopkg.in/yaml.v2 v2.4.0
 )
