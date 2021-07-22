@@ -43,8 +43,7 @@ require (
 	github.com/TheThingsIndustries/magepkg v0.0.0-20190214092847-6c0299b7c3ed
 	github.com/TheThingsIndustries/mystique v0.0.0-20200127144137-4aa959111fe7
 	github.com/TheThingsNetwork/go-cayenne-lib v1.0.0
-	github.com/aws/aws-sdk-go v1.30.22
-	github.com/bep/golibsass v0.7.0 // indirect
+	github.com/aws/aws-sdk-go v1.35.0
 	github.com/blang/semver v2.2.0+incompatible
 	github.com/chrj/smtpd v0.1.2
 	github.com/client9/misspell v0.3.4
@@ -58,7 +57,7 @@ require (
 	github.com/gobuffalo/envy v1.9.0 // indirect
 	github.com/gobwas/glob v0.2.3
 	github.com/gogo/protobuf v1.3.1
-	github.com/gohugoio/hugo v0.70.0
+	github.com/gohugoio/hugo v0.79.1
 	github.com/golang/gddo v0.0.0-20200324184333-3c2cc9a6329d
 	github.com/golang/protobuf v1.3.5
 	github.com/google/wire v0.4.0 // indirect
@@ -84,43 +83,37 @@ require (
 	github.com/jarcoal/httpmock v1.0.5
 	github.com/jaytaylor/html2text v0.0.0-20200412013138-3577fbdbcff7
 	github.com/jinzhu/gorm v1.9.12
-	github.com/kr/pretty v0.2.0
-	github.com/kyokomi/emoji v2.2.2+incompatible // indirect
+	github.com/kr/pretty v0.2.1
 	github.com/labstack/echo/v4 v4.1.11
 	github.com/labstack/gommon v0.3.0
 	github.com/lib/pq v1.5.1
-	github.com/magefile/mage v1.9.0
-	github.com/markbates/inflect v1.0.4 // indirect
-	github.com/mattn/go-colorable v0.1.6 // indirect
+	github.com/magefile/mage v1.10.0
 	github.com/mattn/go-ieproxy v0.0.1 // indirect
 	github.com/mattn/go-isatty v0.0.12
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/mattn/goveralls v0.0.5
 	github.com/mdempsky/unconvert v0.0.0-20200228143138-95ecdbfc0b5f
 	github.com/mgechev/revive v1.0.2
-	github.com/mitchellh/mapstructure v1.3.0
+	github.com/mitchellh/mapstructure v1.3.3
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
 	github.com/nats-io/nats-server/v2 v2.1.4
 	github.com/nats-io/nats.go v1.9.2
-	github.com/nicksnyder/go-i18n v1.10.1 // indirect
 	github.com/oklog/ulid/v2 v2.0.2
 	github.com/openshift/osin v1.0.1
-	github.com/pelletier/go-toml v1.7.0 // indirect
 	github.com/pkg/browser v0.0.0-20180916011732-0a3d74bf9ce4
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.5.1
 	github.com/prometheus/procfs v0.0.11 // indirect
 	github.com/robertkrimen/otto v0.0.0-20191219234010-c382bd3c16ff
-	github.com/rogpeppe/go-internal v1.6.0 // indirect
 	github.com/satori/go.uuid v1.2.0
 	github.com/sendgrid/rest v2.4.1+incompatible // indirect
 	github.com/sendgrid/sendgrid-go v3.5.0+incompatible
 	github.com/skip2/go-qrcode v0.0.0-20191027152451-9434209cb086
 	github.com/smartystreets/assertions v1.1.0
 	github.com/spf13/cast v1.3.1
-	github.com/spf13/cobra v1.0.0
+	github.com/spf13/cobra v1.1.1
 	github.com/spf13/pflag v1.0.5
-	github.com/spf13/viper v1.6.3
+	github.com/spf13/viper v1.7.1
 	github.com/ssor/bom v0.0.0-20170718123548-6386211fdfcf // indirect
 	github.com/tdewolff/minify/v2 v2.7.4 // indirect
 	github.com/valyala/fasttemplate v1.1.0 // indirect
@@ -146,5 +139,5 @@ require (
 	gopkg.in/ini.v1 v1.55.0 // indirect
 	gopkg.in/mail.v2 v2.3.1
 	gopkg.in/square/go-jose.v2 v2.5.1
-	gopkg.in/yaml.v2 v2.3.0
+	gopkg.in/yaml.v2 v2.4.0
 )
