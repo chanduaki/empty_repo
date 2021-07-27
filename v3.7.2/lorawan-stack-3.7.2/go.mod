@@ -54,7 +54,7 @@ require (
 	github.com/gogo/protobuf v1.3.1
 	github.com/gohugoio/hugo v0.75.1
 	github.com/golang/gddo v0.0.0-20200310004957-95ce5a452273
-	github.com/golang/protobuf v1.3.5
+	github.com/golang/protobuf v1.4.2
 	github.com/goreleaser/goreleaser v0.132.0
 	github.com/gorilla/securecookie v1.1.1
 	github.com/gorilla/websocket v1.4.2
@@ -85,8 +85,8 @@ require (
 	github.com/mgechev/revive v1.0.2
 	github.com/mitchellh/mapstructure v1.3.3
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
-	github.com/nats-io/nats-server/v2 v2.1.4
-	github.com/nats-io/nats.go v1.9.1
+	github.com/nats-io/nats-server/v2 v2.2.0
+	github.com/nats-io/nats.go v1.10.1-0.20210228004050-ed743748acac
 	github.com/oklog/ulid/v2 v2.0.2
 	github.com/openshift/osin v1.0.1
 	github.com/pborman/uuid v1.2.0 // indirect
@@ -108,8 +108,8 @@ require (
 	go.thethings.network/lorawan-stack-legacy v0.0.0-20190118141410-68812c833a78
 	gocloud.dev v0.19.0
 	gocloud.dev/pubsub/natspubsub v0.19.0
-	golang.org/x/crypto v0.0.0-20200317142112-1b76d66859c6
-	golang.org/x/net v0.0.0-20200301022130-244492dfa37a
+	golang.org/x/crypto v0.0.0-20210314154223-e6e6c4f2bb5b
+	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110
 	golang.org/x/oauth2 v0.0.0-20200107190931-bf48bf16ab8d
 	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a
 	golang.org/x/tools v0.0.0-20200318132943-540150da7399
